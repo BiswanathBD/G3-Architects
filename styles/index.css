@@ -6,7 +6,9 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
-
+.hide{
+    visibility: hidden;
+}
 
 /* unniversel style */
 body{
@@ -108,7 +110,6 @@ header{
     margin: 130px auto;
 }
 .featurs-list{
-    max-width: 586px;
     margin-right: 146px;
 }
 .list-heading{
@@ -186,4 +187,51 @@ footer{
 }
 footer .desc{
     margin: 0;
+}
+
+/* responsive section */
+
+/* small device responsive */
+@media screen and (max-width: 576px) {
+    .logo{
+        font-size: 1.8rem;
+        margin: 10px 0;
+    }
+    .navs{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .feature-section{
+        flex-direction: column;
+    }
+    .feature-images-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .feature-list-conntainer{
+        flex-direction: column;
+    }
+    .featurs-list{
+        margin: 0 10px;
+    }
+    .architects{
+        width: 100%;
+    }
+    .architects > img{
+        width: 100%;
+    }
+    .architects > button{
+        padding: 20px 30px !important;
+        margin-left: 20px !important;
+    }
+    .years{
+        font-size: 2rem !important;
+    }
+    .fact-card{
+        margin-bottom: 20px;
+    }
+    .sponsors-companis{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
 }
