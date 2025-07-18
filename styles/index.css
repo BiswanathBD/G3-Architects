@@ -106,6 +106,7 @@ header{
 /* feature list related style */
 .feature-list-conntainer{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 130px auto;
 }
@@ -193,13 +194,16 @@ footer .desc{
 
 /* small device responsive */
 @media screen and (max-width: 576px) {
-    .logo{
-        font-size: 1.8rem;
-        margin: 10px 0;
+    .navbar{
+        flex-direction: column;
+        text-align: center;
     }
     .navs{
         flex-direction: column;
-        gap: 10px;
+        gap: 24px;
+    }
+    .nav-item > a{
+        margin: 0;
     }
     .feature-section{
         flex-direction: column;
@@ -233,5 +237,54 @@ footer .desc{
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
+    }
+}
+
+/* medium device responsive */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .logo{
+        margin-bottom: 0px;
+    }
+    .navbar{
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .navs{
+        justify-content: space-around;
+    }
+    .nav-item > a{
+        margin: 0;
+    }
+    .feature-section, .feature-list-conntainer{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .featurs-list{
+        margin: 0 10px;
+    }
+    .architects{
+        width: 100%;
+    }
+    .architects > img{
+        width: 100%;
+    }
+    .architects > button{
+        padding: 20px 30px !important;
+        margin-left: 20px !important;
+    }
+    .years{
+        font-size: 2rem !important;
+    }
+    .fact-card-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-items: center;
+    }
+    .sponsors-companis{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
     }
 }
